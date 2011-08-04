@@ -4,4 +4,9 @@ class City < ActiveRecord::Base
   # validations
   validates :name, :permalink, :presence => true
   
+  #methods
+  
+  def to_param
+    permalink
+  end
 end

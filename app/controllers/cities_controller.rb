@@ -5,7 +5,7 @@ class CitiesController < ApplicationController
   end
   
   def show
-    @city = City.find(params[:id])
+    @city = City.find_by_permalink(params[:id])
   end
   
   def new
@@ -22,7 +22,7 @@ class CitiesController < ApplicationController
   end
   
   def edit
-    @city = City.find(params[:id])
+    @city = City.find_by_permalink(params[:id])
   end
   
   def update
@@ -35,7 +35,7 @@ class CitiesController < ApplicationController
   end
   
   def destroy
-    @city = City.find(params[:id])
+    @city = City.find_by_permalink(params[:id])
     @city.destroy
     redirect_to(cities_url)
   end
