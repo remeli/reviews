@@ -1,0 +1,9 @@
+<% @cities.each do |city| %>
+  <div>
+    <%= link_to city.name, city %>
+  </div>
+<% end %>
+
+<div class="actions">
+  <%= link_to "Добавить город", new_city_path %>
+</div>
