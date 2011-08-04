@@ -1,0 +1,13 @@
+<%= form_for(@city) do |f| %>
+  <div class="field">
+    <%= f.label :name, "Город" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :permalink, "Постоянная ссылка(пример: almaty)" %><br />
+    <%= f.text_field :permalink %>
+  </div>
+  <div class="submit">
+    <%= f.submit "Отправить" %>
+  </div>
+<% end %>

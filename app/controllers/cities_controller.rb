@@ -26,7 +26,7 @@ class CitiesController < ApplicationController
   end
   
   def update
-    @city = City.find(params[:id])
+    @city = City.find_by_permalink(params[:id])
     if @city.update_attributes(params[:city])
       redirect_to(@city, :notice => "Город успешно обновлен")
     else

@@ -6,6 +6,7 @@ class City < ActiveRecord::Base
   
   #methods
   
+  # model name in url
   def to_param
     permalink
   end
