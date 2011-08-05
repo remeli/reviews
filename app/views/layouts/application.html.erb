@@ -1,14 +1,94 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Reviews</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'style' %>
+    <%= javascript_include_tag :all %>
+    <%= csrf_meta_tag %>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <div id="logo">
+          Logotip
+        </div>
+        <div id="search_form">
+          <div id="city_select">
+            <span id="city_label">Город:</span>
+            <select id="cities">
+              <option>Астана</option>
+              <option>Алматы</option>
+              <option>Актау</option>
+              <option>Актобе</option>
+              <option>Атырау</option>
+              <option>Жезказган</option>
+              <option>Караганда</option>
+              <option>Костанай</option>
+              <option>Кокшетау</option>
+              <option>Кызылорда</option>
+              <option>Павлодар</option>
+              <option>Петропавловск</option>
+              <option>Семипалатинск</option>
+              <option>Талдыкорган</option>
+              <option>Тараз</option>
+              <option>Уральск</option>
+              <option>Усть-Каменогорск</option>
+              <option>Шымкент</option>
+            </select>
+          </div>
+          <div id="search_text">
+            <span id="search_text_label">Что ищем?</span>
+            <input type="text" id="search_text_value" value="Ресторан..." />
+          </div>
+          <div id="search_submit">
+            <input type="button" class="button" value="Поиск" />
+          </div>
+        </div>
+        <div id="account_login">
+          <div class="login_area">
+            <a href="#">Вход</a>
+          </div>
+          <div class="signup_area">
+            <a href="#">Регистрация</a>
+          </div>
+        </div>
+        <div class="clear">
+          
+        </div>
+        <div id="main_menu">
+          <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Города</a></li>
+            <li><a href="#">Написать отзыв</a></li>
+            <li><a href="#">Поиск отзыва</a></li>
+            <li><a href="#">Разное</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="cities_menu">
+        <span class="title">Города:</span>
+        <ul>
+          <li><a href="#">Алматы</a></li>
+          <li><a href="#">Астана</a></li>
+          <li><a href="#">Костанай</a></li>
+          <li><a href="#">Актау</a></li>
+          <li><a href="#">Караганда</a></li>
+          <li><a href="#">Павлодар</a></li>
+          <li><a href="#">Атырау</a></li>
+          <li><a href="#">Петропавловск</a></li>
+          <li><a href="#">Шымкент</a></li>
+          <li><a href="#">Усть-Каменогорск</a></li>
+          <li class="more"><a href="#">Подробнее >></a></li>
+        </ul>
+      </div>
+      <div id="main_content">
+        <%= yield %>
+      </div>
+      <div id="footer">
+        &copy; Copyright 2011
+      </div>
+    </div>
+  </body>
 </html>

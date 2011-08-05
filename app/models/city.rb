@@ -2,7 +2,7 @@ class City < ActiveRecord::Base
   # associations
 
   # validations
-  validates :name, :permalink, :presence => true
+  validates :name, :permalink, :presence => true # todo изменить сообщения об ошибках
   
   #methods
   
@@ -10,4 +10,8 @@ class City < ActiveRecord::Base
   def to_param
     permalink
   end
+  
+
+  # TODO associations
+
 end

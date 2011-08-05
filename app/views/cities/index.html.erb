@@ -1,13 +1,17 @@
-<% @cities.each do |city| %>
-  <div>
-    <%= link_to city.name, city %>
-    <div class="action">
-      <%= link_to "Редактировать", edit_city_path(city) %>
-      <%= link_to "Удалить", city, :method => "delete", :confirm => "Уверены?" %>
+<div class="cities_index">
+  <% @cities.each do |city| %>
+    <div class="city_name">
+      <%= link_to city.name, city %>
+      <div class="action">
+        <!--
+          TODO раскоментировать
+        -->
+        <!-- <%= link_to "Редактировать", edit_city_path(city) %>
+             <%= link_to "Удалить", city, :method => "delete", :confirm => "Уверены?" %> -->
+      </div>
     </div>
-  </div>
-<% end %>
-
-<div class="add_city">
-  <%= link_to "Добавить город", new_city_path %>
+  <% end %>
+  <div class="add_city">
+    <%= link_to "Добавить город", new_city_path %>
+  </div>  
 </div>
