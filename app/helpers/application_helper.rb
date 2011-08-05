@@ -1,4 +1,14 @@
 module ApplicationHelper
+  #base title
+  def title
+    base_title = "Reviews.kz"
+    if @title
+      base_title + " / " + @title
+    else
+      base_title
+    end
+  end
+
   # output error messages
   def error_messages_for(object)
     render(:partial => "shared/error_messages", :locals => {:object => object})

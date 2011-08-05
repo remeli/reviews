@@ -1,15 +1,20 @@
 class CitiesController < ApplicationController
   
+  # main methods
+
   def index
     @cities = City.all
+    @title = "Города"
   end
   
   def show
     @city = City.find_by_permalink(params[:id])
+    @title = "Города" + " / " + @city.name 
   end
   
   def new
     @city = City.new
+    @title = "Города" + " / " + "Новый город" 
   end
   
   def create
@@ -23,6 +28,7 @@ class CitiesController < ApplicationController
   
   def edit
     @city = City.find_by_permalink(params[:id])
+    @title = "Города" + " / " + "Редактирование города" + " / " + @city.name
   end
   
   def update
