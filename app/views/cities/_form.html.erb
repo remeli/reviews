@@ -9,9 +9,6 @@
     <%= f.text_field :permalink %>
   </div>
   <div class="submit">
-    <%= f.submit "Отправить" %>
-    <!--
-      TODO сделать ссылку отмена!
-    -->
+    <%= submit_or_cancel(f) %>
   </div>
 <% end %>

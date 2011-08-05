@@ -8,4 +8,10 @@ module ApplicationHelper
   def flash_notice(object)
     render(:partial => "shared/notice", :locals => { :notice => object })
   end
+  
+  # cancel submit form
+  def submit_or_cancel(form, submit_name="Отправить", cancel_name="Отмена")
+    form.submit(submit_name) + " или " +
+    link_to(cancel_name, "javascript:history.go(-1)", :class => "cancel")
+  end
 end
