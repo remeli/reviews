@@ -1,8 +1,4 @@
-<!-- flash -->
-<% if flash[:notice] %>
-  <%= notice %>
-<% end %>
-<!-- end flash -->
+<%= flash_notice(notice) %>
 <div class="title_city">
   <%= @city.name %>
 </div>

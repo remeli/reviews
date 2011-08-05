@@ -182,6 +182,15 @@ color:#fff;
 #main_content .form_for_city .field input{
   margin-top:10px;
 }
+#main_content .title_city{
+  font-size:18px;
+  background:#E9E57C;
+  padding:5px;
+  text-align:center;
+}
+#main_content .back_link{
+  margin-top:10px;
+}
 
 /* errors messages */
 .errorExplanation{
@@ -198,4 +207,13 @@ color:#fff;
   color:#fff;
   padding:5px;
   background:#99211E;
+}
+
+/* flash[:notice] */
+.flash_notice{
+  color:#fff;
+  background:#7AC161;
+  padding:5px;
+  font-size:14px;
+  margin-bottom:10px;
 }
