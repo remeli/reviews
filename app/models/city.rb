@@ -1,6 +1,6 @@
 class City < ActiveRecord::Base
   # associations
-
+  has_many :companies
   # validations
   validates :name, :presence => { :message => "Имя пустое"} #todo: http://rubyclub.com.ua/messages/show/15656
   
