@@ -1,6 +1,8 @@
 Reviews::Application.routes.draw do
   
-  resources :cities
+  resources :cities do
+    resources :companies
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
