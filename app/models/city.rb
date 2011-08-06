@@ -2,7 +2,8 @@ class City < ActiveRecord::Base
   # associations
 
   # validations
-  validates :name, :presence => { :message => "Имя пустое"} #todo: перевести полностью сообщение
+  validates :name, :presence => { :message => "Имя пустое"} #todo: http://rubyclub.com.ua/messages/show/15656
+  
   validates :permalink, :presence => { :message => "Постоянная ссылка пустая"}
   #methods
   
