@@ -194,10 +194,10 @@ color:#fff;
 
 /* errors messages */
 .errorExplanation{
-  color:#fff;
-  background:#99211E;
+  color:#000;
+  border:3px solid #99211E;
   padding:5px;
-  font-size:14px;
+  font-size:11px;
   margin-bottom:10px;
 }
 .errorExplanation ul li{

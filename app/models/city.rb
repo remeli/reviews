@@ -2,8 +2,8 @@ class City < ActiveRecord::Base
   # associations
 
   # validations
-  validates :name, :permalink, :presence => true # todo изменить сообщения об ошибках
-  
+  validates :name, :presence => { :message => "Имя пустое"} #todo: перевести полностью сообщение
+  validates :permalink, :presence => { :message => "Постоянная ссылка пустая"}
   #methods
   
   # model name in url
