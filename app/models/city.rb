@@ -1,18 +1,12 @@
 class City < ActiveRecord::Base
-  # associations
-  has_many :companies
-  # validations
+  has_many :companies, :dependent => :destroy
+  
   validates :name, :presence => { :message => "Имя пустое"} #todo: http://rubyclub.com.ua/messages/show/15656
   
   validates :permalink, :presence => { :message => "Постоянная ссылка пустая"}
-  #methods
-  
-  # model name in url
+
   def to_param
     permalink
   end
-  
-
-  # TODO associations
 
 end

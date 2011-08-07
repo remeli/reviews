@@ -5,9 +5,9 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :permalink, :null => false, :limit => 60
       t.integer :rating, :default => 0
       t.text :description
-      t.integer :category_id, :null => false
-      t.integer :city_id, :null => false
-      t.integer :user_id, :null => false
+      t.integer :category_id
+      t.integer :city_id
+      t.integer :user_id
       t.timestamps
     end
     add_index("companies","name")
@@ -17,6 +17,9 @@ class CreateCompanies < ActiveRecord::Migration
   end
 
   def self.down
+    remove_index("companies","name")
+    remove_index("companies", "category_id")
+    remove_index("companies", "city_id")
     drop_table :companies
   end
 end

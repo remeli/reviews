@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  
   def index
     @companies = Company.all
     @title = "Компании"
@@ -39,4 +40,5 @@ class CompaniesController < ApplicationController
     @company.destroy
     redirect_to(companies_url)
   end
+  
 end

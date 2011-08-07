@@ -1,14 +1,13 @@
 class CitiesController < ApplicationController
   
-  # main methods
-
   def index
     @cities = City.all
     @title = "Города"
   end
   
   def show
-    @city = City.find_by_permalink(params[:id])
+    @city = City.find_by_permalink[params[:id]].companies
+    # @city = City.find_by_permalink(params[:id])
     @title = "Города" + " / " + @city.name 
   end
   
