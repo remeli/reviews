@@ -11,8 +11,9 @@ class Company < ActiveRecord::Base
   validates :name , :length => { :maximum => 150 }
   validates :permalink , :length => { :maximum => 60 }
   
-  # methods
-  
+  # todo: scope, и сделать филтрацию компаний по городам
+  # todo : заполнить вьюхи
+
   def to_param
     permalink
   end
