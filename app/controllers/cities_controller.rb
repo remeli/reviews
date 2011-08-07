@@ -6,9 +6,9 @@ class CitiesController < ApplicationController
   end
   
   def show
-    @city = City.find_by_permalink[params[:id]].companies
-    # @city = City.find_by_permalink(params[:id])
-    @title = "Города" + " / " + @city.name 
+    @city = City.find_by_permalink(params[:id])
+    @companies = @city.companies
+    @title = "Города" + " / " + @city.name
   end
   
   def new

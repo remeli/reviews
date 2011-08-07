@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110802131144) do
+ActiveRecord::Schema.define(:version => 20110806174928) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :null => false
@@ -18,5 +18,21 @@ ActiveRecord::Schema.define(:version => 20110802131144) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name",        :limit => 150,                :null => false
+    t.string   "permalink",   :limit => 60,                 :null => false
+    t.integer  "rating",                     :default => 0
+    t.text     "description"
+    t.integer  "category_id"
+    t.integer  "city_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["category_id"], :name => "index_companies_on_category_id"
+  add_index "companies", ["city_id"], :name => "index_companies_on_city_id"
+  add_index "companies", ["name"], :name => "index_companies_on_name"
 
 end
