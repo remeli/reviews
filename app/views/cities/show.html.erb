@@ -2,6 +2,14 @@
 <div class="title_city">
   <%= @city.name %>
 </div>
+<div class="list_companies">
+  <% @companies.each do |company| %>
+    <%= link_to company.name, company_url(company) %>
+  <% end %>
+</div>
+<div class="add_item">
+  <%= link_to "Добавить компанию", new_company_path %>
+</div>
 <div class="back_link">
   <%= link_to "К списку городов", cities_url %>
 </div>
