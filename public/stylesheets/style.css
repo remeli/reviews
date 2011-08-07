@@ -154,7 +154,7 @@ color:#fff;
 }
 /* footer */
 #footer{
-  border:1px solid #ccc;
+  border-top:1px solid #ccc;
   height:120px;
 }
 
@@ -219,3 +219,17 @@ color:#fff;
 }
 
 /*Content in companies*/
+.list_companies{
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:5px;
+  border:1px solid #ccc;
+}
+#main_content .company{
+  font-size:18px;
+/*  background:#B8DF61;*/
+  padding:5px;
+  width:680px;
+  text-align:left;
+  border-right:1px solid #ccc;
+}
