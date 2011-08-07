@@ -2,15 +2,17 @@ class CompaniesController < ApplicationController
   
   def index
     @companies = Company.all
-    @title = "Компании"
+    @title = "Каталог компаний"
   end
   
   def show
     @company = Company.find_by_permalink(params[:id])
+    @title = @company.name
   end
   
   def new
     @company = Company.new
+    @title = "Новая компания"
   end
   
   def create
@@ -24,6 +26,7 @@ class CompaniesController < ApplicationController
   
   def edit
     @company = Company.find_by_permalink(params[:id])
+    @title = "Редактирование компании"
   end
   
   def update
