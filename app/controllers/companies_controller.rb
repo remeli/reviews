@@ -32,10 +32,10 @@ class CompaniesController < ApplicationController
   def update
     @company = Company.find_by_permalink(params[:id])
     if @company.update_attributes(params[:company])
-      redirect_to(@company, "Компания успешно обновлена")
+      redirect_to(@company, :notice => "Компания успешно обновлена")
     else
       render(:action => "edit")
-    end    
+    end
   end
   
   def destroy
