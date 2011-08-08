@@ -5,6 +5,5 @@ class ApplicationController < ActionController::Base
   def load_cities_menu
     @cities_menu = City.limit(10)
   end
-  
-  
+
 end
