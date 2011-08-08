@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110806174928) do
+ActiveRecord::Schema.define(:version => 20110808165631) do
 
   create_table "cities", :force => true do |t|
     t.string   "name",       :null => false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20110806174928) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address"
   end
 
   add_index "companies", ["category_id"], :name => "index_companies_on_category_id"

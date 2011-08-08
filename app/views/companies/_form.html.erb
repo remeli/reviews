@@ -17,6 +17,10 @@
     <%= collection_select(:company, :city_id, City.all, :id, :name) %>
   </div>
   <div class="field">
+    <%= f.label :address, "Адрес:" %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
     <!--
       TODO :category, and users
     -->

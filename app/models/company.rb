@@ -12,7 +12,7 @@ class Company < ActiveRecord::Base
   validates :permalink , :length => { :maximum => 60 }
 
   validates :permalink, :uniqueness => { :message => "Такая ссылка уже существует" }
-  
+  validates :address, :presence => { :message => "Адрес пустой" }
   # todo: scope, и сделать филтрацию компаний по городам
   # todo : заполнить вьюхи
 
