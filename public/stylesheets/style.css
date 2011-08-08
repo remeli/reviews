@@ -256,6 +256,10 @@ color:#fff;
 #main_content .company .extra p{
   margin-top:5px;
 }
+#main_content .company .address{
+  font-size:16px;
+  margin-bottom:15px;
+}
 
 /*reviews*/
 #main_content .reviews_comments{

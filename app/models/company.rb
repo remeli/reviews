@@ -6,7 +6,7 @@ class Company < ActiveRecord::Base
   
 
   validates :name, :presence => { :message => "Имя пустое" }
-  validates :permalink, :presence => { :messages => "Пустая ссылка пустая" }
+  validates :permalink, :presence => { :message => "Пустая ссылка пустая" }
 
   validates :name , :length => { :maximum => 150 }
   validates :permalink , :length => { :maximum => 60 }
