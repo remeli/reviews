@@ -69,13 +69,7 @@
         </div>
       </div>
       <div id="cities_menu">
-        <span class="title">Города:</span>
-        <ul>
-          <% @cities_menu.each do |city| %>
-            <li><%= link_to city.name, city %></li>
-          <% end %>
-          <li class="more"><a href="#">Подробнее >></a></li>
-        </ul>
+        <%= render 'layouts/menu' %>
       </div>
       <div id="main_content">
         <%= yield %>
