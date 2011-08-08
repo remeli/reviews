@@ -4,12 +4,14 @@ class Company < ActiveRecord::Base
   
   # validations :
   
-  # validates => presence
+
   validates :name, :presence => { :message => "Имя пустое" }
   validates :permalink, :presence => { :messages => "Пустая ссылка пустая" }
-  #validates => length
+
   validates :name , :length => { :maximum => 150 }
   validates :permalink , :length => { :maximum => 60 }
+
+  validates :permalink, :uniqueness => { :message => "Такая ссылка уже существует" }
   
   # todo: scope, и сделать филтрацию компаний по городам
   # todo : заполнить вьюхи
@@ -17,5 +19,6 @@ class Company < ActiveRecord::Base
   def to_param
     permalink
   end
+
   
 end
