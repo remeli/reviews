@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_filter :load_cities_menu
   
   def load_cities_menu
-    @cities = City.limit(10)
+    @cities_menu = City.limit(10)
   end
   
   
