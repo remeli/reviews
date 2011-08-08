@@ -60,7 +60,7 @@
         </div>
         <div id="main_menu">
           <ul>
-            <li><a href="#">Главная</a></li>
+            <li><%= link_to "Главная",root_url %></li>
             <li><%= link_to "Города", cities_url %></li>
             <li><a href="#">Написать отзыв</a></li>
             <li><a href="#">Поиск отзыва</a></li>
@@ -71,16 +71,9 @@
       <div id="cities_menu">
         <span class="title">Города:</span>
         <ul>
-          <li><a href="#">Алматы</a></li>
-          <li><a href="#">Астана</a></li>
-          <li><a href="#">Костанай</a></li>
-          <li><a href="#">Актау</a></li>
-          <li><a href="#">Караганда</a></li>
-          <li><a href="#">Павлодар</a></li>
-          <li><a href="#">Атырау</a></li>
-          <li><a href="#">Петропавловск</a></li>
-          <li><a href="#">Шымкент</a></li>
-          <li><a href="#">Усть-Каменогорск</a></li>
+          <% @cities.each do |city| %>
+            <li><%= link_to city.name, city %></li>
+          <% end %>
           <li class="more"><a href="#">Подробнее >></a></li>
         </ul>
       </div>
