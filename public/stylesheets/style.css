@@ -125,7 +125,7 @@ color:#fff;
 }
 #cities_menu .title{
   float:left;
-  margin-top:5px;
+  margin-top:6px;
   font-size:16px;
   margin-left:10px;
   margin-right:10px;
@@ -145,7 +145,8 @@ color:#fff;
   padding-left:7px;
   padding-right:7px;
   text-align:center;
-  margin-top:6px;
+  margin-top:8px;
+  text-decoration:none;
 }
 /* main content */
 #main_content{
@@ -255,10 +256,20 @@ color:#fff;
 }
 #main_content .company .extra p{
   margin-top:5px;
+  font-size:12px;
 }
 #main_content .company .address{
-  font-size:16px;
-  margin-bottom:15px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+#main_content .form_for_company .field{
+  padding:5px;
+  margin-bottom:5px;
+  color:#676766;
+  font-size:14px;
+}
+#main_content .form_for_company .field input, select, textarea{
+  margin-top:5px;
 }
 
 /*reviews*/

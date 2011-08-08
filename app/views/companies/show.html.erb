@@ -4,9 +4,9 @@
     <%= @company.name %>
   </div>
   <div class="extra">
+    <p>Город: <%= link_to @company.city.name, @company.city %></p>  
     <p class="address">Адрес: <%= @company.address %></p>
     <p>Рейтинг: <%= @company.rating %></p>
-    <p>Город: <%= link_to @company.city.name, @company.city %></p>
   </div>
   <div class="description">
     <%= @company.description %>
