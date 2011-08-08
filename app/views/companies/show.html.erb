@@ -3,10 +3,17 @@
   <div class="title">
     <%= @company.name %>
   </div>
+  <div class="extra">
+    <p>Рейтинг: <%= @company.rating %></p>
+    <p>Город: <%= link_to @company.city.name, @company.city %></p>
+  </div>
   <div class="description">
     <%= @company.description %>
   </div>
   <div class="date">
     Дата добавления: <%= date(@company) %>
   </div>
+</div>
+<div class="reviews_comments">
+  <p class="title">Отзывы:</p>
 </div>
