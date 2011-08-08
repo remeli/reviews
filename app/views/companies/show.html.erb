@@ -1,4 +1,12 @@
 <%= flash_notice(notice) %>
 <div class="company">
-  <%= @company.name %>
+  <div class="title">
+    <%= @company.name %>
+  </div>
+  <div class="description">
+    <%= @company.description %>
+  </div>
+  <div class="date">
+    Дата добавления: <%= date(@company) %>
+  </div>
 </div>

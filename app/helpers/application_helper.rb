@@ -24,4 +24,9 @@ module ApplicationHelper
     form.submit(submit_name) + " или " +
     link_to(cancel_name, "javascript:history.go(-1)", :class => "cancel")
   end
+  
+  # format date
+  def date(object)
+    object.created_at.to_date
+  end
 end

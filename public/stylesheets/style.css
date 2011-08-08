@@ -226,10 +226,23 @@ color:#fff;
   border:1px solid #ccc;
 }
 #main_content .company{
-  font-size:18px;
-/*  background:#B8DF61;*/
   padding:5px;
   width:680px;
   text-align:left;
   border-right:1px solid #ccc;
+}
+#main_content .company .title{
+  font-size:18px;
+  background:#B8DF61;
+  padding:5px;
+}
+#main_content .company .description{
+  padding:5px;
+  line-height:15px;
+}
+#main_content .company .date{
+  font-size:10px;
+  text-align:right;
+  padding-top:5px;
+  color:#ccc;
 }
