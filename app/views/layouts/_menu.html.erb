@@ -3,5 +3,5 @@
   <% @cities_menu.each do |city| %>
     <li><%= link_to city.name, city %></li>
   <% end %>
-  <li class="more"><a href="#">Подробнее >></a></li>
+  <li class="more"><%= link_to "Подробнее >>", cities_url %></li>
 </ul>

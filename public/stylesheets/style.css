@@ -226,6 +226,9 @@ color:#fff;
   padding:5px;
   border:1px solid #ccc;
 }
+.list_companies ul li{
+  padding-bottom:10px;
+}
 #main_content .company{
   padding:5px;
   width:680px;
