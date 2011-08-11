@@ -1,10 +1,9 @@
 class Company < ActiveRecord::Base
-  # associations
+  
   belongs_to :city
   
-  # validations :
+  default_scope order("companies.name ASC")
   
-
   validates :name, :presence => { :message => "Имя пустое" }
   validates :permalink, :presence => { :message => "Пустая ссылка пустая" }
 
@@ -14,7 +13,7 @@ class Company < ActiveRecord::Base
   validates :permalink, :uniqueness => { :message => "Такая ссылка уже существует" }
   validates :address, :presence => { :message => "Адрес пустой" }
   # todo: scope, и сделать филтрацию компаний по городам
-  # todo : заполнить вьюхи
+  
 
   def to_param
     permalink
