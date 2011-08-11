@@ -14,7 +14,12 @@
   <div class="date">
     Дата добавления: <%= date(@company) %>
   </div>
+  <div class="action">
+    <%= link_to "Редактировать", edit_company_path(@company) %>
+    <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
+  </div>  
 </div>
 <div class="reviews_comments">
   <p class="title">Отзывы:</p>
 </div>
+
