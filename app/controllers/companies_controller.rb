@@ -46,8 +46,8 @@ class CompaniesController < ApplicationController
   
   def rating
     @company = Company.find_by_permalink(params[:id])
-    @company.change_rating(params[:commit])
-    @company.update_attributes(@company.rating)
+    result = @company.change_rating(params[:commit])
+    @company.update_attribute(:rating, result)
     redirect_to(@company)
   end
   
