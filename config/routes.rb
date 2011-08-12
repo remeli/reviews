@@ -1,5 +1,7 @@
 Reviews::Application.routes.draw do
   
+  get "categories/index"
+
   root :to => "pages#index"
   resources :cities
   resources :companies
