@@ -18,6 +18,14 @@ class Company < ActiveRecord::Base
   def to_param
     permalink
   end
-
+  
+  def change_rating(commit)
+    case commit
+    when commit = "+"
+      self.rating += 1
+    when commit = "-"
+      self.rating -= 1      
+    end
+  end
   
 end

@@ -44,4 +44,11 @@ class CompaniesController < ApplicationController
     redirect_to(companies_url)
   end
   
+  def rating
+    @company = Company.find_by_permalink(params[:id])
+    @company.change_rating(params[:commit])
+    @company.update_attributes(@company.rating)
+    redirect_to(@company)
+  end
+  
 end

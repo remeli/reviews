@@ -6,7 +6,13 @@
   <div class="extra">
     <p>Город: <%= link_to @company.city.name, @company.city %></p>  
     <p class="address">Адрес: <%= @company.address %></p>
-    <p>Рейтинг: <%= @company.rating %></p>
+    <p>
+      Рейтинг: <%= @company.rating %>
+        <%= form_tag change_rating_url do %>
+          <%= submit_tag "+" %>
+          <%= submit_tag "-" %>
+        <% end %>
+    </p>
   </div>
   <div class="description">
     <%= @company.description %>

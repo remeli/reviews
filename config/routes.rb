@@ -4,7 +4,7 @@ Reviews::Application.routes.draw do
   resources :companies
   root :to => "pages#index"
   
-  
+  match "companies/:id/change_rating" => "companies#rating" , :as => :change_rating
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
