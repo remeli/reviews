@@ -1,8 +1,9 @@
 Reviews::Application.routes.draw do
   
+  root :to => "pages#index"
   resources :cities
   resources :companies
-  root :to => "pages#index"
+  resources :categories
   
   match "companies/:id/change_rating" => "companies#rating" , :as => :change_rating
   # The priority is based upon order of creation:
