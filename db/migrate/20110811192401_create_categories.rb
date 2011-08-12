@@ -5,9 +5,11 @@ class CreateCategories < ActiveRecord::Migration
       t.string :permalink, :null => false, :limit => 150
       t.timestamps
     end
+    add_index("categories", "name")
   end
 
   def self.down
+    remove_index("categories", "name")
     drop_table :categories
   end
 end
