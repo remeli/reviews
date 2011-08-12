@@ -1,6 +1,7 @@
 class Company < ActiveRecord::Base
   
   belongs_to :city
+  belongs_to :category
   
   default_scope order("companies.name ASC")
   
