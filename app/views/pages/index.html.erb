@@ -1,4 +1,7 @@
-<div class="cetagories_list">
+<div class="categories_list">
+  <div class="browse_category">
+    Выберите категорию:
+  </div>
   <ul>
     <% @categories.each do |category| %>
       <li><%= link_to category.name, category %></li>
