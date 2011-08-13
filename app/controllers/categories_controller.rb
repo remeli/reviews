@@ -1,8 +1,12 @@
 class CategoriesController < ApplicationController
   
+  def index
+    redirect_to(:controller => "pages", :action => "index")
+  end
   
   def show
     @category = Category.find_by_permalink(params[:id])
+    @companies = @category.companies
     @title = @category.name
   end
   
