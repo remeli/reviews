@@ -9,7 +9,7 @@ class Category < ActiveRecord::Base
   validates :permalink , :length => { :maximum => 150 }
   
   default_scope order("categories.name ASC")
-  
+
   def to_param
     permalink
   end
