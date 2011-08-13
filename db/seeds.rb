@@ -9,17 +9,30 @@
 #cities
 cities = City.create(
   [
-    {:name => "Алматы", :permalink => "almaty"},
-    {:name => "Астана", :permalink => "astana"},
-    {:name => "Костанай", :permalink => "kostanay"},
-    {:name => "Павлодар", :permalink => "pavlodar"},
-    {:name => "Усть-Каменогорск", :permalink => "ustkamenogorsk"},
-    {:name => "Петропавловск", :permalink => "petropavlovsk"},
-    {:name => "Актау", :permalink => "aktau"},
-    {:name => "Атырау", :permalink => "atirau"},
-    {:name => "Уральск", :permalink => "uralsk"},
-    {:name => "Караганда", :permalink => "karagandy"},
-    {:name => "Тараз", :permalink => "taraz"},
+    { :name => "Алматы", :permalink => "almaty" },
+    { :name => "Астана", :permalink => "astana" },
+    { :name => "Костанай", :permalink => "kostanay" },
+    { :name => "Павлодар", :permalink => "pavlodar" },
+    { :name => "Усть-Каменогорск", :permalink => "ustkamenogorsk" },
+    { :name => "Петропавловск", :permalink => "petropavlovsk" },
+    { :name => "Актау", :permalink => "aktau" },
+    { :name => "Атырау", :permalink => "atirau" },
+    { :name => "Уральск", :permalink => "uralsk" },
+    { :name => "Караганда", :permalink => "karagandy" },
+    { :name => "Тараз", :permalink => "taraz" },
+  ]
+)
+
+#categories
+categories = Category.create(
+  [
+    { :name => "Рестораны", :permalink => "restaurants" },
+    { :name => "Учебные заведения", :permalink => "education" },
+    { :name => "Клубы", :permalink => "clubs" },
+    { :name => "Покупки", :permalink => "shopping" },
+    { :name => "Искусство", :permalink => "arts" },
+    { :name => "Активный образ жизни", :permalink => "active_life" },
+    { :name => "Здоровье и Медицина", :permalink => "health_and_medical" }
   ]
 )
 
@@ -29,10 +42,11 @@ companies = Company.create(
     {:name => "Воздух", :permalink => "vozdux", :rating => 10, :description => "Клуб",
      :category_id => 1, :city_id => 1, :user_id => 1},
     {:name => "Малышок", :permalink => "malishok", :rating => 0, :description => "Кафе",
-     :category_id => 1, :city_id => 2, :user_id => 1},     
+     :category_id => 2, :city_id => 2, :user_id => 1},     
     {:name => "Торт", :permalink => "tort", :rating => 10, :description => "кондитерская",
-     :category_id => 1, :city_id => 3, :user_id => 1},
+     :category_id => 3, :city_id => 3, :user_id => 1},
     {:name => "Школа 3", :permalink => "school3", :rating => 10, :description => "Школа",
-     :category_id => 1, :city_id => 4, :user_id => 1},
+     :category_id => 4, :city_id => 4, :user_id => 1},
   ]
 )
+
