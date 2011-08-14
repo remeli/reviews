@@ -241,7 +241,8 @@ color:#fff;
 }
 #main_content .company .title{
   font-size:18px;
-  background:#B8DF61;
+  background:#4E4E4E;
+  color:#fff;
   padding:5px;
 }
 #main_content .company .description{
@@ -318,3 +319,10 @@ color:#fff;
   text-decoration:underline;
 }
 
+#main_content .title_category{
+  font-size:18px;
+  background:#4E4E4E;
+  padding:5px;
+  text-align:left;
+  color:#fff;
+}
