@@ -13,7 +13,11 @@
     <%= f.text_area :description, :cols => 29, :rows => 10 %>
   </div>
   <div class="field">
-    <%= f.label :description, "Город:" %><br />
+    <%= f.label :category_id, "Категория:" %><br />
+    <%= collection_select(:company, :category_id, Category.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :city_id, "Город:" %><br />
     <%= collection_select(:company, :city_id, City.all, :id, :name) %>
   </div>
   <div class="field">

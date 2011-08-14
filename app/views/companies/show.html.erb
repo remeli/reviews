@@ -9,8 +9,8 @@
     <p>
       Рейтинг: <%= @company.rating %>
         <%= form_tag change_rating_url do %>
-          <%= submit_tag "+" %>
           <%= submit_tag "-" %>
+          <%= submit_tag "+" %>
         <% end %>
     </p>
   </div>

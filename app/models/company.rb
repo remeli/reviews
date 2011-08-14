@@ -10,7 +10,7 @@ class Company < ActiveRecord::Base
 
   validates :name , :length => { :maximum => 150 }
   validates :permalink , :length => { :maximum => 60 }
-
+  validates :category_id, :presence => { :message => "Категория долна быть выбрана!"}
   validates :permalink, :uniqueness => { :message => "Такая ссылка уже существует" }
   validates :address, :presence => { :message => "Адрес пустой" }
   # todo: scope, и сделать филтрацию компаний по городам
