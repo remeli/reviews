@@ -8,6 +8,8 @@ Reviews::Application.routes.draw do
   resources :categories
   
   match "companies/:id/change_rating" => "companies#rating" , :as => :change_rating
+  
+  match "categories/:city_id/:id" => "categories#show", :as => :city_with_category
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

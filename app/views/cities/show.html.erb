@@ -2,18 +2,13 @@
 <div class="title_city">
   <%= @city.name %>
 </div>
-<div class="list_companies">
+<div class="categories_list">
+  <div class="browse_category">
+    Выберите категорию:
+  </div>
   <ul>
-    <% @companies.each do |company| %>
-      <li><%= link_to company.name, company_url(company) %></li>
-    <% end %>
-
+    <% @categories.each do |category| %>
+      <li><%= link_to category.name, city_with_category_path(@city, category) %></li>
+    <% end %>  
   </ul>
-
-</div>
-<div class="add_item">
-  <%= link_to "Добавить компанию", new_company_path %>
-</div>
-<div class="back_link">
-  <%= link_to "К списку городов", cities_url %>
 </div>
