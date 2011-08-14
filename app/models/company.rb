@@ -15,7 +15,8 @@ class Company < ActiveRecord::Base
   validates :address, :presence => { :message => "Адрес пустой" }
   # todo: scope, и сделать филтрацию компаний по городам
   
-
+  scope :where_category_city, lambda { |cat_id, city_id| where("companies.category_id = ? AND companies.city_id = ?", "#{cat_id}", "#{city_id}") }
+  
   def to_param
     permalink
   end

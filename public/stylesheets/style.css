@@ -291,6 +291,7 @@ color:#fff;
 
 /*categories*/
 #main_content .categories_list{
+  margin-top:10px;
   width:250px;
 
 }
