@@ -6,8 +6,8 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find_by_permalink(params[:id])
-    @title = @category.name
     @city = City.find_by_permalink(params[:city_id])
+    @title = @city.name + " / " + @category.name 
     @companies = Company.where_category_city(@category.id, @city.id)
   end
   
