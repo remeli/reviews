@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110815173753) do
+ActiveRecord::Schema.define(:version => 20110811192401) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :limit => 100, :null => false
@@ -44,22 +44,5 @@ ActiveRecord::Schema.define(:version => 20110815173753) do
   add_index "companies", ["category_id"], :name => "index_companies_on_category_id"
   add_index "companies", ["city_id"], :name => "index_companies_on_city_id"
   add_index "companies", ["name"], :name => "index_companies_on_name"
-
-  create_table "users", :force => true do |t|
-    t.string   "email",           :limit => 100,                           :null => false
-    t.integer  "rating",                         :default => 0
-    t.string   "first_name",      :limit => 150,                           :null => false
-    t.string   "last_name",       :limit => 150,                           :null => false
-    t.string   "avatar_url",                     :default => "avatar.jpg"
-    t.text     "about"
-    t.boolean  "admin",                          :default => false
-    t.integer  "city_id",                                                  :null => false
-    t.string   "hashed_password"
-    t.string   "salt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "users", ["email"], :name => "index_users_on_email"
 
 end
