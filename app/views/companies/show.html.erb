@@ -4,6 +4,9 @@
   </div>
   <div class="extra">
     <p>Город: <%= link_to @company.city.name, @company.city %></p>  
+    <p>Категория: 
+      <%= link_to @company.category.name, city_with_category_path(@company.city, @company.category) %>
+    </p>
     <p class="address">Адрес: <%= @company.address %></p>
     <p>
       Рейтинг: <%= @company.rating %>

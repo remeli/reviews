@@ -233,17 +233,18 @@ color:#fff;
   margin-bottom:5px;
 }
 #main_content .company{
-  padding:5px;
+  padding-right:10px;
+  padding-bottom:10px;
   width:680px;
   text-align:left;
   border-right:1px solid #ccc;
   border-bottom:1px solid #ccc;  
 }
 #main_content .company .title{
-  font-size:18px;
+  font-size:16px;
   background:#4E4E4E;
   color:#fff;
-  padding:5px;
+  padding:7px;
 }
 #main_content .company .description{
   font-size:14px;
@@ -281,7 +282,7 @@ color:#fff;
 
 /*reviews*/
 #main_content .reviews_comments{
-  padding:5px;
+  padding-right:10px;
   border-right:1px solid #ccc;
   width:680px;
 }
@@ -320,9 +321,16 @@ color:#fff;
 }
 
 #main_content .title_category{
-  font-size:18px;
+  font-size:16px;
   background:#4E4E4E;
-  padding:5px;
+  padding:7px;
   text-align:left;
+  color:#ccc;
+}
+#main_content .title_category a{
+  text-decoration:none;
   color:#fff;
+}
+#main_content .title_category a:hover{
+  text-decoration:underline;
 }
