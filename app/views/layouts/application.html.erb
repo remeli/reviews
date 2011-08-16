@@ -52,7 +52,7 @@
             <a href="#">Вход</a>
           </div>
           <div class="signup_area">
-            <a href="#">Регистрация</a>
+            <%= link_to "Регистрация", new_user_registration_path %>
           </div>
         </div>
         <div class="clear">
@@ -72,6 +72,7 @@
         <%= render 'layouts/menu' %>
       </div>
       <div id="main_content">
+        <%= flash_notice(notice) %>
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>

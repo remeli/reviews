@@ -5,7 +5,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
-  # Configure the class responsible to send e-mails.
+  # Configure the class responsible to shownd e-mails.
   # config.mailer = "Devise::Mailer"
 
   # ==> ORM configuration
