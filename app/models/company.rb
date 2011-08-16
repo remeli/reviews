@@ -13,7 +13,6 @@ class Company < ActiveRecord::Base
   validates :category_id, :presence => { :message => "Категория долна быть выбрана!"}
   validates :permalink, :uniqueness => { :message => "Такая ссылка уже существует" }
   validates :address, :presence => { :message => "Адрес пустой" }
-  # todo: scope, и сделать филтрацию компаний по городам
   
   scope :where_category_city, lambda { |cat_id, city_id| where("companies.category_id = ? AND companies.city_id = ?", "#{cat_id}", "#{city_id}") }
   
