@@ -48,12 +48,22 @@
           </div>
         </div>
         <div id="account_login">
-          <div class="login_area">
-            <a href="#">Вход</a>
-          </div>
-          <div class="signup_area">
-            <%= link_to "Регистрация", new_user_registration_path %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="login_area">
+              <%= link_to('Настройки', edit_user_registration_path) %>
+            </div>
+            <div class="signup_area">
+              <%= link_to "Выход", destroy_user_session_path, :method => "delete" %>
+            </div>
+          <% else %>
+            <div class="login_area">
+              <%= link_to "Вход", new_user_session_path %>
+            </div>
+            <div class="signup_area">
+              <%= link_to "Регистрация", new_user_registration_path %>
+            </div>          
+          <% end %>
+
         </div>
         <div class="clear">
           
