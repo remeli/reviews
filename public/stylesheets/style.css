@@ -9,7 +9,7 @@ html,body{
   margin:0 auto;
   width:1000px;
 }
-#wrapper a{
+a{
   color:#676766;
 }
 #header{
@@ -333,4 +333,38 @@ color:#fff;
 }
 #main_content .title_category a:hover{
   text-decoration:underline;
+}
+
+/*devise*/
+#main_content .title_action{
+  color:#fff;
+  background:#7AC161;
+  padding:7px;
+  font-size:16px;
+  margin-bottom:10px;
+  text-align:center;
+}
+#main_content .new_registration{
+  width:400px;
+  margin:0 auto;
+  padding:5px;
+  border:1px solid #ccc;
+}
+#main_content .new_registration input{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+}
+.devise_shared_links{
+  margin-top:5px;
+  height:25px;
+}
+.devise_shared_links a{
+  text-decoration:none;
+  display:block;
+  background:#4E4E4E;
+  color:#fff;
+  padding:5px;
+  float:left;
+  margin-right:10px;
 }
