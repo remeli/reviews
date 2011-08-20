@@ -219,6 +219,13 @@ color:#fff;
   font-size:14px;
   margin-bottom:10px;
 }
+.flash_alert{
+  color:#7E3935;
+  border:1px solid #7E3935;
+  padding:5px;
+  font-size:14px;
+  margin-bottom:10px;
+}
 
 /*Content in companies*/
 .list_companies{
@@ -345,9 +352,9 @@ color:#fff;
   text-align:center;
 }
 #main_content .new_registration{
-  width:400px;
+  width:380px;
   margin:0 auto;
-  padding:5px;
+  padding:10px;
   border:1px solid #ccc;
 }
 #main_content .new_registration input[type='email'], input[type='password']{
@@ -370,4 +377,40 @@ color:#fff;
   font-size:11px;
   float:left;
   margin-right:10px;
+}
+#main_content .sign_in{
+  width:380px;
+  margin:0 auto;
+  padding:10px;
+  padding-left:80px;
+}
+#main_content .sign_in input[type='email'], input[type='password']{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  height:20px;
+  font-size:12px;
+}
+#main_content .sign_in input[type='email']{
+  margin-left:10px;
+}
+#main_content .sign_in label{
+  font-size:14px;
+}
+#main_content .sign_in .remember{
+  text-align:left;
+  margin-left:55px;
+}
+#main_content .sign_in .submit{
+  text-align:left;
+  margin-left:55px;
+  margin-top:10px;
+}
+#main_content .sign_in .shared_links{
+  margin-left:130px;
+  margin-top:10px;
+}  
+#main_content .sign_in .sign_in_forgot a{
+  font-size:11px;
+  text-decoration:none;
 }

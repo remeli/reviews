@@ -2,4 +2,12 @@
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash_notice" %>
   <% end %>
+<% elsif flash[:alert] %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash_alert" %>
+  <% end %>
+<% elsif flash[:error] %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash_error" %>
+  <% end %>  
 <% end %>
