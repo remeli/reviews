@@ -353,16 +353,17 @@ color:#fff;
 }
 #main_content .new_registration{
   width:380px;
-  margin:0 auto;
   padding:10px;
-  border:1px solid #ccc;
 }
-#main_content .new_registration input[type='email'], input[type='password']{
+#main_content .new_registration input[type='email'], input[type='password'], input[type='text']{
   margin-top:5px;
   margin-bottom:10px;
   border:1px solid #ccc;
   height:18px;
   font-size:12px;
+}
+#main_content .new_registration .select_city{
+  margin-bottom:10px;
 }
 .devise_shared_links{
   margin-top:10px;
