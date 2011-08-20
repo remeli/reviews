@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :city_id, :first_name, :last_name, :avatar_url, :about
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :city_id, :rating, :name, :avatar_url, :about
   
   validates :city_id, :presence =>  { :message => "Город должен быть выбран!"}
   validates :name, :presence => { :message => "Имя пустое" }
