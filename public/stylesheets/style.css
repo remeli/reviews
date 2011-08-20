@@ -350,13 +350,15 @@ color:#fff;
   padding:5px;
   border:1px solid #ccc;
 }
-#main_content .new_registration input{
+#main_content .new_registration input[type='email'], input[type='password']{
   margin-top:5px;
   margin-bottom:10px;
   border:1px solid #ccc;
+  height:18px;
+  font-size:12px;
 }
 .devise_shared_links{
-  margin-top:5px;
+  margin-top:10px;
   height:25px;
 }
 .devise_shared_links a{
@@ -364,7 +366,8 @@ color:#fff;
   display:block;
   background:#4E4E4E;
   color:#fff;
-  padding:5px;
+  padding:4px;
+  font-size:11px;
   float:left;
   margin-right:10px;
 }
