@@ -9,5 +9,5 @@ class User < ActiveRecord::Base
   
   validates :city_id, :presence =>  { :message => "Город должен быть выбран!"}
   validates :name, :presence => { :message => "Имя пустое" }
-  validates :name, :length => { :minimum => 3}
+  validates :name, :length => { :minimum => 3, :message => "В имени должно быть минимум 3 символа"}
 end

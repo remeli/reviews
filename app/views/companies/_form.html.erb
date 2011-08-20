@@ -18,7 +18,7 @@
   </div>
   <div class="field">
     <%= f.label :city_id, "Город:" %><br />
-    <%= collection_select(:company, :city_id, City.all, :id, :name) %>
+    <%= collection_select(:company, :city_id, City.ascname, :id, :name) %>
   </div>
   <div class="field">
     <%= f.label :address, "Адрес:" %><br />

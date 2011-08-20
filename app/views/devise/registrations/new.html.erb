@@ -13,7 +13,7 @@
     </p>
     <p class="select_city">
       <%= f.label :city_id, "Город:" %>
-      <%= collection_select(:user, :city_id, City.all, :id, :name) %>
+      <%= collection_select(:user, :city_id, City.ascname, :id, :name) %>
     </p>
     <p>
       <%= f.label :password, "Пароль:" %><br />
