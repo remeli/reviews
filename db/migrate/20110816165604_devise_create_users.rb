@@ -11,8 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       # t.token_authenticatable
       t.integer :city_id
       t.integer :rating, :default => 0
-      t.string :first_name
-      t.string :last_name
+      t.string :name
       t.string :avatar_url
       t.text :about
       t.timestamps
