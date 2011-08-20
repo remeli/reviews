@@ -63,7 +63,6 @@
               <%= link_to "Регистрация", new_user_registration_path %>
             </div>          
           <% end %>
-
         </div>
         <div class="clear">
           
@@ -75,6 +74,11 @@
             <li><a href="#">Написать отзыв</a></li>
             <li><a href="#">Поиск отзыва</a></li>
             <li><a href="#">Разное</a></li>
+            <% if user_signed_in? %>
+              <span class="user_info">
+                Вы вошли как: <%= current_user.name %>
+              </span>
+            <% end %>
           </ul>
         </div>
       </div>

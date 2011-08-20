@@ -115,6 +115,20 @@ color:#fff;
 #main_menu ul li a:hover{
   color:#828282;
 }
+#main_menu .user_info{
+  display:block;
+  float:right;
+  color:#000;
+  font-size:11px;
+  background:;
+  padding:5px;
+  margin-top:5px;
+  margin-right:5px;
+}
+#main_menu .user_info:hover{
+  background:#7AC161;
+  color:#fff;
+}
 /*menu cities*/
 #cities_menu{
   margin-top:15px;
@@ -341,6 +355,7 @@ color:#fff;
 #main_content .title_category a:hover{
   text-decoration:underline;
 }
+
 
 /*devise*/
 #main_content .title_action{
