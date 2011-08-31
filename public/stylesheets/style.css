@@ -407,6 +407,12 @@ color:#fff;
   height:20px;
   font-size:12px;
 }
+#main_content textarea{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  font-size:12px;
+}
 #main_content .sign_in input[type='email']{
   margin-left:10px;
 }
