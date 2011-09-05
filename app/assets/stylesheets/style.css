@@ -1,0 +1,438 @@
+html,body{
+  font-family:Arial,Tahoma, sans-serif;
+  font-size:12px;
+  
+}
+#wrapper{
+  border:1px solid #ccc;
+  height:100%;
+  margin:0 auto;
+  width:1000px;
+}
+a{
+  color:#676766;
+}
+#header{
+  height:125px;
+}
+#logo{
+  display:block;
+  height:60px;
+  width:130px;
+  border:1px solid #ccc;
+  float:left;
+  margin:5px;
+}
+/* search_form */
+#search_form{
+  float:left;
+  position:relative;
+  left:50px;
+  top:20px;
+}
+#search_form #city_select{
+  float:left;
+}  
+#city_select #city_label{
+  font-size:18px;
+  margin-right:5px;
+}
+#city_select #cities{
+  font-size:16px;
+}
+#search_form #search_text{
+  float:left;
+  margin-left:10px;
+}
+#search_text #search_text_label{
+  font-size:18px;
+  margin-right:5px;
+}
+#search_text #search_text_value{
+  border:1px solid #ccc;
+  height:20px;
+  width:160px;
+  font-size:16px;
+  margin-right:5px;
+}
+#search_submit{
+  float:left;
+}
+/* button */
+.button {
+height:24px;
+border-color:#000;
+border-style:solid;
+border-width:1px;
+background:#707570;
+cursor:pointer;
+color:#fff;
+}
+#account_login{
+  float:right;
+  height:60px;
+  width:150px;
+  margin-top:3px;
+}
+#account_login .login_area{
+  padding:5px;
+  border-bottom:1px solid #ccc;
+}
+#account_login .signup_area{
+  padding:5px;
+}
+#account_login a{
+  font-size:16px;
+  text-decoration:none;
+}
+#header .clear{
+  clear:both;
+}
+#main_menu{
+  margin-top:20px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  height:30px;
+}
+#main_menu ul li{
+  float:left;
+  list-style:none;
+  font:12px Tahoma, Arial;
+}
+#main_menu ul li a{
+  border-right:1px solid #ccc;
+  display:block;
+  height:24px;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:7px;
+  text-decoration:none;
+  text-align:center;
+  width:auto;
+  color:#000;
+  white-space:nowrap;
+}
+#main_menu ul li a:hover{
+  color:#828282;
+}
+#main_menu .user_info{
+  display:block;
+  float:right;
+  color:#000;
+  font-size:11px;
+  background:;
+  padding:5px;
+  margin-top:5px;
+  margin-right:5px;
+}
+#main_menu .user_info:hover{
+  background:#7AC161;
+  color:#fff;
+}
+/*menu cities*/
+#cities_menu{
+  margin-top:15px;
+  margin-bottom:12px;
+  height:30px;
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+}
+#cities_menu .title{
+  float:left;
+  margin-top:6px;
+  font-size:16px;
+  margin-left:10px;
+  margin-right:10px;
+}
+#cities_menu ul{
+  margin-left:70px;
+}
+#cities_menu ul li{
+  height:30px;
+  float:left;
+  list-style:none;
+  border-left:1px solid #ccc;
+}
+#cities_menu ul li a{
+
+  display:block;
+  font-size:14px;
+  padding-left:7px;
+  padding-right:7px;
+  text-align:center;
+  margin-top:8px;
+  text-decoration:none;
+}
+/* main content */
+#main_content{
+  height:100%;
+  padding:10px;
+}
+/* footer */
+#footer{
+  border-top:1px solid #ccc;
+  height:120px;
+}
+
+
+/* Content in */
+/* city */
+#main_content .cities_index{
+  font-size:14px;
+}
+#main_content .city_name{
+  margin-bottom:10px;
+}
+#main_content .form_for_city{
+  border:1px solid #ccc;
+  width:400px;
+  padding:10px;
+  margin:0 auto;
+}
+#main_content .form_for_city .field{
+  padding:5px;
+  margin-bottom:5px;
+  color:#676766;
+  font-size:14px;
+}
+#main_content .form_for_city .field input{
+  margin-top:10px;
+}
+#main_content .title_city{
+  font-size:18px;
+  background:#E9E57C;
+  padding:5px;
+  text-align:center;
+}
+#main_content .back_link{
+  margin-top:10px;
+}
+
+/* errors messages */
+.errorExplanation{
+  color:#000;
+  border:2px solid #7E3935;
+  padding:5px;
+  font-size:11px;
+  margin-bottom:10px;
+}
+.errorExplanation ul li{
+  padding-top:5px;
+}
+.field_with_errors label{
+  color:#fff;
+  padding:5px;
+  background:#7E3935;
+}
+
+/* flash[:notice] */
+.flash_notice{
+  color:#fff;
+  background:#7AC161;
+  padding:5px;
+  font-size:14px;
+  margin-bottom:10px;
+}
+.flash_alert{
+  color:#7E3935;
+  border:1px solid #7E3935;
+  padding:5px;
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+/*Content in companies*/
+.list_companies{
+  width:400px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:5px;
+  border:1px solid #ccc;
+}
+.list_companies ul li{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+#main_content .company{
+  padding-right:10px;
+  padding-bottom:10px;
+  width:680px;
+  text-align:left;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;  
+}
+#main_content .company .title{
+  font-size:16px;
+  background:#4E4E4E;
+  color:#fff;
+  padding:7px;
+}
+#main_content .company .description{
+  font-size:14px;
+  padding:5px;
+  line-height:18px;
+}
+#main_content .company .date{
+  font-size:11px;
+  text-align:right;
+  padding:10px;
+  color:#ccc;
+}
+#main_content .company .extra{
+  padding:5px;
+  font-size:12px;
+  color:;
+}
+#main_content .company .extra p{
+  margin-top:5px;
+  font-size:12px;
+}
+#main_content .company .address{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+#main_content .form_for_company .field{
+  padding:5px;
+  margin-bottom:5px;
+  color:#676766;
+  font-size:14px;
+}
+#main_content .form_for_company .field input, select, textarea{
+  margin-top:5px;
+}
+
+/*reviews*/
+#main_content .reviews_comments{
+  padding-right:10px;
+  border-right:1px solid #ccc;
+  width:680px;
+}
+#main_content .reviews_comments .title{
+  font-size:16px;
+  padding:5px;
+}
+
+/*categories*/
+#main_content .categories_list{
+  margin-top:10px;
+  width:250px;
+
+}
+#main_content .categories_list .browse_category{
+  background:#4E4E4E;
+  color:#fff;
+  font-size:14px;
+  padding:5px;
+}
+#main_content .categories_list ul{
+  padding:5px;
+}
+#main_content .categories_list ul li {
+  margin-top:7px;
+  margin-bottom:7px;
+  color:#fff;
+}
+#main_content .categories_list a{
+  text-decoration:none;
+  color:#828282;
+}
+#main_content .categories_list a:hover{
+  color:#000;
+  text-decoration:underline;
+}
+
+#main_content .title_category{
+  font-size:16px;
+  background:#4E4E4E;
+  padding:7px;
+  text-align:left;
+  color:#ccc;
+}
+#main_content .title_category a{
+  text-decoration:none;
+  color:#fff;
+}
+#main_content .title_category a:hover{
+  text-decoration:underline;
+}
+
+
+/*devise*/
+#main_content .title_action{
+  color:#fff;
+  background:#7AC161;
+  padding:7px;
+  font-size:16px;
+  margin-bottom:10px;
+  text-align:center;
+}
+#main_content .new_registration{
+  width:380px;
+  padding:10px;
+}
+#main_content .new_registration input[type='email'], input[type='password'], input[type='text']{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  height:18px;
+  font-size:12px;
+}
+#main_content .new_registration .select_city{
+  margin-bottom:10px;
+}
+.devise_shared_links{
+  margin-top:10px;
+  height:25px;
+}
+.devise_shared_links a{
+  text-decoration:none;
+  display:block;
+  background:#4E4E4E;
+  color:#fff;
+  padding:4px;
+  font-size:11px;
+  float:left;
+  margin-right:10px;
+}
+#main_content .sign_in{
+  width:380px;
+  margin:0 auto;
+  padding:10px;
+  padding-left:80px;
+}
+#main_content .sign_in input[type='email'], input[type='password']{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  height:20px;
+  font-size:12px;
+}
+#main_content textarea{
+  margin-top:5px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  font-size:12px;
+}
+#main_content .sign_in input[type='email']{
+  margin-left:10px;
+}
+#main_content .sign_in label{
+  font-size:14px;
+}
+#main_content .sign_in .remember{
+  text-align:left;
+  margin-left:55px;
+}
+#main_content .sign_in .submit{
+  text-align:left;
+  margin-left:55px;
+  margin-top:10px;
+}
+#main_content .sign_in .shared_links{
+  margin-left:130px;
+  margin-top:10px;
+}  
+#main_content .sign_in .sign_in_forgot a{
+  font-size:11px;
+  text-decoration:none;
+}
