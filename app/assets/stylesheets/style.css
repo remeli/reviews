@@ -306,10 +306,14 @@ color:#fff;
   padding-right:10px;
   border-right:1px solid #ccc;
   width:680px;
+  padding-top:10px;
 }
 #main_content .reviews_comments .title{
   font-size:16px;
   padding:5px;
+  background:#F6F6F6;
+  color:#7E7E7E;
+  margin-bottom:10px;
 }
 
 /*categories*/

@@ -1,34 +1,8 @@
-<div class="company">
-  <div class="title">
-    <%= @company.name %>
-  </div>
-  <div class="extra">
-    <p>Город: <%= link_to @company.city.name, @company.city %></p>  
-    <p>Категория: 
-      <%= link_to @company.category.name, city_with_category_path(@company.city, @company.category) %>
-    </p>
-    <p class="address">Адрес: <%= @company.address %></p>
-    <p>
-      Рейтинг: <%= @company.rating %>
-        <%= form_tag change_rating_url do %>
-          <%= submit_tag "-" %>
-          <%= submit_tag "+" %>
-        <% end %>
-    </p>
-  </div>
-  <div class="description">
-    <%= @company.description %>
-  </div>
-  <div class="date">
-    Дата добавления: <%= date(@company) %>
-  </div>
-  <div class="action">
-    <%= link_to "Редактировать", edit_company_path(@company) %>
-    <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
-  </div>  
-</div>
+<%= render @company %>
 <div class="reviews_comments">
   <p class="title">Отзывы:</p>
-  <p></p>
+  <%= render(@company.reviews) %>
+  <p>
+    <%= render :file => "reviews/new" %>
+  </p>
 </div>
-

@@ -6,7 +6,10 @@ Reviews::Application.routes.draw do
 
   root :to => "pages#index"
   resources :cities
-  resources :companies
+  resources :companies do
+    resources :reviews
+  end
+  
   resources :categories
   
   match "companies/:id/change_rating" => "companies#rating" , :as => :change_rating

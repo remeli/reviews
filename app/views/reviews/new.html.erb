@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+<div class="add_review">
+  <%= form_for([@company, @company.reviews.new]) do |f| %>
+    <div class="field">
+      <input type="hidden" name="review[user_id]" value="<%= current_user.id %>">
+      <input type="hidden" name="review[company_id]" value="<%= @company.id %>">    
+      <p class="title_rev"><%= f.label :post, "Отзыв:" %></p>
+      <%= f.text_area :post, :cols => 45, :rows => 10 %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Добавить" %>
+    </div>
+  <% end %>  
+</div>
+<% else %>
+    <p class="please_sign_up">Чтобы добавить отзыв, <%= link_to "зарегистрируйтесь", new_user_registration_path %> или <%= link_to "войдите", new_user_session_path %></p>
+<% end %>

@@ -2,3 +2,39 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.review{
+  margin-bottom:5px;
+  margin-left:10px;
+  padding-bottom:5px;
+  color:#484848;
+}
+.name{
+  margin-bottom:5px;
+}
+.title_rev{
+  font-size:14px;
+  background:#7AC161;
+  padding:5px;
+  color:#fff;
+  width:328px;
+}
+.name{
+  font-size:12px;
+}
+.date{
+  font-size:10px;
+}
+.post{
+  padding-top:5px;
+  font-size:12px;
+  line-height:15px;
+}
+.please_sign_up{
+  margin-left:10px;
+  font-size:16px;
+  margin-bottom:10px;
+  margin-top:10px;
+}
+.add_review{
+  margin-left:10px;
+}

@@ -1,10 +1,10 @@
 class Company < ActiveRecord::Base
   
   #associations
+  has_many :reviews
   belongs_to :city
   belongs_to :category
   belongs_to :user
-  has_many :reviews
   default_scope order("companies.name ASC")
   
   validates :name, :presence => { :message => "Имя пустое" }
