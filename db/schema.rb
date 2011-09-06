@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816165604) do
+ActiveRecord::Schema.define(:version => 20110906054711) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :limit => 100, :null => false
@@ -44,6 +44,16 @@ ActiveRecord::Schema.define(:version => 20110816165604) do
   add_index "companies", ["category_id"], :name => "index_companies_on_category_id"
   add_index "companies", ["city_id"], :name => "index_companies_on_city_id"
   add_index "companies", ["name"], :name => "index_companies_on_name"
+
+  create_table "reviews", :force => true do |t|
+    t.text     "post",                         :null => false
+    t.boolean  "type",       :default => true
+    t.integer  "rating",     :default => 0
+    t.integer  "user_id",                      :null => false
+    t.integer  "company_id",                   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
