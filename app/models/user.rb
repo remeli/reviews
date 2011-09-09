@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
   validates :name, :presence => { :message => "Имя пустое" }
   validates :name, :length => { :minimum => 3, :message => "В имени должно быть минимум 3 символа"}
 
+  # paperclip
+  
+  has_attached_file :avatar, :styles => { :thumb => "34x34>", :medium => "100x100>" },
+                      :url => "/system/:attachment/:id/:style/:basename.:extension",
+                      :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
+
+    validates_attachment_size :photo, :less_than => 5.megabytes
+    validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 end

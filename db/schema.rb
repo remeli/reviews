@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906054711) do
+ActiveRecord::Schema.define(:version => 20110909094838) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :limit => 100, :null => false
@@ -73,6 +73,10 @@ ActiveRecord::Schema.define(:version => 20110906054711) do
     t.text     "about"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   add_index "users", ["city_id"], :name => "index_users_on_city_id"
