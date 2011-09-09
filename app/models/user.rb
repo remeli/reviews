@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :city_id, :rating, :name, :avatar_url, :about
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :city_id, :rating, :name, :avatar_url, :about, :avatar
   
   validates :city_id, :presence =>  { :message => "Город должен быть выбран!"}
   validates :name, :presence => { :message => "Имя пустое" }
@@ -21,6 +21,6 @@ class User < ActiveRecord::Base
                       :url => "/system/:attachment/:id/:style/:basename.:extension",
                       :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
 
-    validates_attachment_size :photo, :less_than => 5.megabytes
-    validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+    validates_attachment_size :avatar, :less_than => 5.megabytes
+    validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
 end
