@@ -9,6 +9,10 @@
     <%= f.label :name, "Имя:" %><br />
     <%= f.text_field :name %>
   </p>
+  <p>
+    <%= f.label :avatar, "Аватар" %><br />
+    <%= f.file_field :avatar %>
+  </p>
   <p class="select_city">
     <%= f.label :city_id, "Город:" %>
     <%= collection_select(:user, :city_id, City.ascname, :id, :name) %>
