@@ -1,6 +1,17 @@
 <%= div_for review do %>
   <% @user = User.find(review.user_id) %>
-  <p class="name"><%= image_tag @user.avatar.url(:thumb) %> <%= @user.name %>:</p>
-  <p class="date"><%= date(review) %></p>
-  <p class="post"><%= review.post %></p>
+  <div class="head_info">
+    <div class="avatar">
+      <%= image_tag @user.avatar.url(:thumb) %>
+    </div>
+    <div class="name">
+      <%= @user.name %>
+    </div>
+    <span class="date">
+      <%= date(review) %>
+    </span>
+  </div>
+  <div class="post">
+    <%= review.post %>
+  </div>
 <% end %>

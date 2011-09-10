@@ -8,24 +8,43 @@
   padding-bottom:5px;
   color:#484848;
 }
-.name{
-  margin-bottom:5px;
+.head_info{
+  border-bottom:1px solid #E6E6E6;
+  height:34px;
 }
-.title_rev{
-  margin-top:20px;
-  font-size:14px;
-  width:328px;
+.avatar{
+  float:left;
+}
+.avatar img{
+  width:34px;
+  height:34px;
 }
 .name{
+  margin-top:5px;
+  font-weight:bold;
   font-size:12px;
+  float:left;
+  margin-left:10px;
+  width:500px;
+  color:#646464;
 }
 .date{
-  font-size:10px;
+  font-size:9px;
+  position:relative;
+  top:20px;
+  right:500px;
+  color:#C3C3C3;
 }
 .post{
   padding-top:5px;
   font-size:12px;
   line-height:15px;
+  clear:both;
+}
+.title_rev{
+  margin-top:20px;
+  font-size:14px;
+  width:328px;
 }
 .please_sign_up{
   margin-left:10px;
