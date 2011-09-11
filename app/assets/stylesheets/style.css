@@ -333,6 +333,9 @@ color:#fff;
   color:#7E7E7E;
   margin-bottom:10px;
 }
+#main_content #block_add_review{
+  width:680px;
+}
 
 /*categories*/
 #main_content .categories_list{

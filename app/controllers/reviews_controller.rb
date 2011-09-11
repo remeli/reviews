@@ -6,9 +6,15 @@ class ReviewsController < ApplicationController
   def create
     @review = @company.reviews.new(params[:review])
     if @review.save
-      redirect_to @company, :notice => "Отзыв успешно добавлен"
+      respond_to do |format|
+        format.html { redirect_to @company, :notice => "Отзыв успешно добавлен" }
+        format.js
+      end
     else
-      redirect_to @company, :alert => "Отзыв не добавлен"
+      respond_to do |format|
+        format.html { redirect_to @company, :alert => "Отзыв не добавлен" }
+        format.js
+      end
     end
   end
   
