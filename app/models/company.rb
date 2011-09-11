@@ -1,7 +1,14 @@
 class Company < ActiveRecord::Base
   
-  after_validation :add_city_to_address
+  def full_address
+    city = City.find_by_id(self.city_id)
+    "#{self.address}, #{city.name}"
+  end
   
+  geocoded_by :full_address
+  after_validation :geocode
+  
+    
   #associations
   has_many :reviews
   belongs_to :city
@@ -33,10 +40,5 @@ class Company < ActiveRecord::Base
     end
   end
   
-  private
-  
-    def add_city_to_address
-      city = City.find_by_id(self.city_id)
-      self.address = "#{self.address} , #{city.name}"
-    end
+
 end
