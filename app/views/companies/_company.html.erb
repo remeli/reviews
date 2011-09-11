@@ -26,8 +26,4 @@
     <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
   </div>  
 </div>
-<div class="map">
-  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=550x350&sensor=false&zoom=16&markers=#{@company.latitude}%2C#{@company.longitude}" %>
-  
-</div>
-
+<%= render 'map' %>

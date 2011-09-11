@@ -260,6 +260,7 @@ color:#fff;
   text-align:left;
   border-right:1px solid #ccc;
   border-bottom:1px solid #ccc;  
+  float:left;
 }
 #main_content .company .title{
   font-size:16px;
@@ -271,6 +272,7 @@ color:#fff;
   font-size:14px;
   padding:5px;
   line-height:18px;
+  min-height:50px;
 }
 #main_content .company .dateadd_company{
   font-size:11px;
@@ -300,13 +302,29 @@ color:#fff;
 #main_content .form_for_company .field input, select, textarea{
   margin-top:5px;
 }
-
+#main_content .map_company{
+  opacity:1;
+  float:left;
+  margin-left:15px;
+  border:1px solid #CECECE;
+}
+#main_content .map_company:hover{
+  opacity:0.5;
+}
+#main_content .map_company .header{
+  padding:8px;
+  text-align:center;
+  background:#7AC161;
+  color:#fff;
+  font-size:14px;
+}
 /*reviews*/
 #main_content .reviews_comments{
   padding-right:10px;
   border-right:1px solid #ccc;
   width:680px;
   padding-top:10px;
+  clear:both;
 }
 #main_content .reviews_comments .title{
   font-size:16px;
@@ -440,3 +458,4 @@ color:#fff;
   font-size:11px;
   text-decoration:none;
 }
+
