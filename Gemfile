@@ -8,7 +8,7 @@ gem 'rails', '3.1.0'
 gem 'mysql2'
 gem 'devise'
 gem 'paperclip'
-gem 'gmaps4rails'
+gem 'geocoder'
 
 group :console do
   gem "awesome_print"

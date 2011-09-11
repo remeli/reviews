@@ -33,12 +33,14 @@ ActiveRecord::Schema.define(:version => 20110909094838) do
     t.string   "permalink",   :limit => 60,                 :null => false
     t.integer  "rating",                     :default => 0
     t.text     "description"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
     t.integer  "category_id"
     t.integer  "city_id"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "address"
   end
 
   add_index "companies", ["category_id"], :name => "index_companies_on_category_id"

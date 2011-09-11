@@ -5,6 +5,9 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :permalink, :null => false, :limit => 60
       t.integer :rating, :default => 0
       t.text :description
+      t.string :address
+      t.float :latitude
+      t.float :longitude
       t.integer :category_id
       t.integer :city_id
       t.integer :user_id

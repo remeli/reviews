@@ -8,6 +8,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find_by_permalink(params[:id])
     @title = "#{@company.city.name} / #{@company.category.name} / #{@company.name}"
+    
   end
   
   def new

@@ -40,13 +40,13 @@ categories = Category.create(
 companies = Company.create(
   [
     {:name => "Воздух", :permalink => "vozdux", :rating => 10, :description => "Клуб",
-     :category_id => 3, :city_id => 1, :user_id => 1, :address => "Кирова, 30" },
+     :category_id => 3, :city_id => 1, :user_id => 1, :address => "Абая 13" },
     {:name => "Малышок", :permalink => "malishok", :rating => 0, :description => "Кафе",
-     :category_id => 1, :city_id => 2, :user_id => 1, :address => "Проспект Турана" },     
+     :category_id => 1, :city_id => 2, :user_id => 1, :address => "Абая 12" },     
     {:name => "Торт", :permalink => "tort", :rating => 10, :description => "кондитерская",
-     :category_id => 4, :city_id => 3, :user_id => 1, :address => "Толе-би 43" },
+     :category_id => 4, :city_id => 3, :user_id => 1, :address => "Абая 17" },
     {:name => "Школа 3", :permalink => "school3", :rating => 10, :description => "Школа",
-     :category_id => 2, :city_id => 4, :user_id => 1, :address => "Абая 24" }
+     :category_id => 2, :city_id => 4, :user_id => 1, :address => "Абая 2" }
   ]
 )
 
