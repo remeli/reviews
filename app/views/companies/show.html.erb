@@ -2,7 +2,11 @@
 <div class="reviews_comments">
   <p class="title">Отзывы:</p>
   <%= render(@company.reviews) %>
-  <p>
-    <%= render :file => "reviews/new" %>
+  <p id="block_add_review">
+    <% if user_signed_in? %>
+    <%= link_to "Добавить отзыв", new_company_review_path(@company, :format => :js), :remote => true, :id => 'new_review_link' %>
+   <% else %>
+       <p class="please_sign_up">Чтобы добавить отзыв, <%= link_to "зарегистрируйтесь", new_user_registration_path %> или <%= link_to "войдите", new_user_session_path %></p>
+   <% end %>
   </p>
 </div>

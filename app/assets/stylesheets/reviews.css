@@ -54,4 +54,11 @@
 }
 .add_review{
   margin-left:10px;
+  display:none;
+}
+#new_review_link{
+  font-size:16px;
+  margin-left:10px;
+  margin-top:20px;
+  margin-bottom:20px;
 }
