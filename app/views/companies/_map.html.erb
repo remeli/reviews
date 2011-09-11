@@ -1,0 +1,6 @@
+<div class="map_company">
+<div class="header">
+  Карта
+</div>
+  <a onclick="return jsiBoxOpen(this)" title="<%= @company.city.name %>, <%=      @company.address %>" href="<%= "http://maps.google.com/maps/api/staticmap?size=700x500&sensor=false&zoom=16&markers=#{@company.latitude}%2C#{@company.longitude}"%>"><%= image_tag "http://maps.google.com/maps/api/staticmap?size=270x170&sensor=false&zoom=16&markers=#{@company.latitude}%2C#{@company.longitude}"%></a>
+</div>
