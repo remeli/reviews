@@ -25,9 +25,7 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <!--
-      TODO :category, and users
-    -->
+    <input type="hidden" name="company[user_id]" value="<%= current_user.id %>">
   </div>
   <div class="submit">
     <%= submit_or_cancel(f) %>

@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(params[:category])
     if @category.save
-      redirect_to(@category, :notice => "Категория успешно создана")
+      redirect_to(root_path, :notice => "Категория успешно создана")
     else
       render(:action => "new")
     end

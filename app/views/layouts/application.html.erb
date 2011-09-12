@@ -73,6 +73,7 @@
             <li><a href="#">Написать отзыв</a></li>
             <li><a href="#">Поиск отзыва</a></li>
             <li><a href="#">Разное</a></li>
+            <li><%= link_to "Добавить компанию", new_company_path %></li>
             <% if user_signed_in? %>
               <span class="user_info">
                 Вы вошли как: <%= current_user.name %>

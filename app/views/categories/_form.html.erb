@@ -1,0 +1,13 @@
+<%= form_for(@category) do |f| %>
+  <div class="field">
+    <%= f.label :name, "Название:" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :permalink, "Прямая ссылка:" %><br />
+    <%= f.text_field :permalink %>
+  </div>
+  <div class="submit">
+    <%= submit_or_cancel(f) %>
+  </div>
+<% end %>
