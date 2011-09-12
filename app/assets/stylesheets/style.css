@@ -303,6 +303,7 @@ color:#fff;
   margin-top:5px;
 }
 #main_content .map_company{
+  width:270px;
   opacity:1;
   float:left;
   margin-left:15px;
