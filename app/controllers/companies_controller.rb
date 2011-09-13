@@ -1,5 +1,7 @@
 class CompaniesController < ApplicationController
   
+  before_filter :user_have, :only => [:new, :create]
+  
   def index
     @companies = Company.all
     @title = "Каталог компаний"
@@ -51,5 +53,12 @@ class CompaniesController < ApplicationController
     @company.update_attribute(:rating, result)
     redirect_to(@company)
   end
+  
+  private
+    def user_have
+      unless current_user
+        redirect_to root_path, :notice => "Зарегистрируйтесь или войдите"
+      end
+    end
   
 end
