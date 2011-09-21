@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   
-  before_filter :user_have, :only => [:new, :create]
+  before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy]
   before_filter :check_owner, :only => [:edit, :update, :destroy]
   def index
     @companies = Company.all
@@ -10,7 +10,6 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find_by_permalink(params[:id])
     @title = "#{@company.city.name} / #{@company.category.name} / #{@company.name}"
-    
   end
   
   def new
@@ -58,14 +57,14 @@ class CompaniesController < ApplicationController
   private
     def user_have
       unless current_user
-        redirect_to root_path, :notice => "Зарегистрируйтесь или войдите"
+        redirect_to root_path, :alert => "Зарегистрируйтесь или войдите"
       end
     end
   
     def check_owner
       @company = Company.find_by_permalink(params[:id])
       unless current_user.id == @company.user_id
-        redirect_to @company, :alert => "Вы не можете редактировать эту компанию"
+        redirect_to @company, :alert => "У Вас нет прав для редактирования/удаления этой компании"
       end
     end
     

@@ -22,10 +22,12 @@
     Дата добавления: <%= date(@company) %>
   </div>
   <% if user_signed_in? %>
-    <div class="action">
-      <%= link_to "Редактировать", edit_company_path(@company) %>
-      <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
-    </div>
+    <% if current_user.id == @company.user_id %>
+      <div class="action">
+        <%= link_to "Редактировать", edit_company_path(@company) %>
+        <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 <%= render 'map' %>
