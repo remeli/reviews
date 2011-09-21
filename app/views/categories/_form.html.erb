@@ -1,4 +1,5 @@
 <%= form_for(@category) do |f| %>
+  <%= error_messages_for(@category) %>
   <div class="field">
     <%= f.label :name, "Название:" %><br />
     <%= f.text_field :name %>

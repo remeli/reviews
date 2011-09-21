@@ -21,9 +21,13 @@
   <div class="dateadd_company">
     Дата добавления: <%= date(@company) %>
   </div>
-  <div class="action">
-    <%= link_to "Редактировать", edit_company_path(@company) %>
-    <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
-  </div>
+  <% if user_signed_in? %>
+    <% if @company.owner_company?(current_user) %>
+    <div class="action">
+      <%= link_to "Редактировать", edit_company_path(@company) %>
+      <%= link_to "Удалить", @company,  :method => "delete", :confirm => "Вы уверены?" %>
+    </div>
+    <% end %>
+  <% end %>
 </div>
 <%= render 'map' %>

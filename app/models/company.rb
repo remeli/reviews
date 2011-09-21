@@ -27,10 +27,12 @@ class Company < ActiveRecord::Base
   
   scope :where_category_city, lambda { |cat_id, city_id| where("companies.category_id = ? AND companies.city_id = ?", "#{cat_id}", "#{city_id}") }
   
+  # permalink
   def to_param
     permalink
   end
   
+  # rating
   def change_rating(commit)
     case commit
     when commit = "+"
@@ -40,5 +42,13 @@ class Company < ActiveRecord::Base
     end
   end
   
-
+  # Owner company
+  def owner_company?(user)
+    if user.id == self.user_id
+      true
+    else
+      false
+    end
+  end
+  
 end
