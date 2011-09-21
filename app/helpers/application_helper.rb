@@ -29,4 +29,14 @@ module ApplicationHelper
   def date(object)
     object.created_at.to_date
   end
+  
+  #owner
+  def owner?(object)
+      if current_user
+        if current_user.id == object.user_id
+          render(:partial => "shared/actions", :locals => {:object => object})
+        end        
+      end
+  end
+  
 end
