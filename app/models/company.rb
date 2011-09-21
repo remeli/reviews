@@ -42,13 +42,4 @@ class Company < ActiveRecord::Base
     end
   end
   
-  # Owner company
-  def owner_company?(user)
-    if user.id == self.user_id
-      true
-    else
-      false
-    end
-  end
-  
 end

@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   
   before_filter :user_have, :only => [:new, :create]
-  
+  before_filter :check_owner, :only => [:edit, :update, :destroy]
   def index
     @companies = Company.all
     @title = "Каталог компаний"
@@ -54,6 +54,7 @@ class CompaniesController < ApplicationController
     redirect_to(@company)
   end
   
+  
   private
     def user_have
       unless current_user
@@ -61,4 +62,11 @@ class CompaniesController < ApplicationController
       end
     end
   
+    def check_owner
+      @company = Company.find_by_permalink(params[:id])
+      unless current_user.id == @company.user_id
+        redirect_to @company, :alert => "Вы не можете редактировать эту компанию"
+      end
+    end
+    
 end
