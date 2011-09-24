@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   
   before_filter :load_company
-
+  before_filter :user_have, :only => [:create, :destroy]
+  
   # todo: нельзя добавлять комментарии не зарегистрированным/залогонившимся
   
   def create
