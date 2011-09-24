@@ -1,5 +1,7 @@
 class CitiesController < ApplicationController
   
+  before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy]
+  
   def index
     @cities = City.all
     @title = "Города"

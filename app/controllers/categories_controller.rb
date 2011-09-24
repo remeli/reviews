@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   
-  before_filter :user_have, :only => [:new, :create, :edit, :update]
+  before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy]
   
   def index
     redirect_to(:controller => "pages", :action => "index")
