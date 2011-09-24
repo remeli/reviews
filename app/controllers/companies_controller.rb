@@ -55,11 +55,6 @@ class CompaniesController < ApplicationController
   
   
   private
-    def user_have
-      unless current_user
-        redirect_to root_path, :alert => "Зарегистрируйтесь или войдите"
-      end
-    end
   
     def check_owner
       @company = Company.find_by_permalink(params[:id])

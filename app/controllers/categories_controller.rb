@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
   
+  before_filter :user_have, :only => [:new, :create, :edit, :update]
+  
   def index
     redirect_to(:controller => "pages", :action => "index")
   end
@@ -44,5 +46,6 @@ class CategoriesController < ApplicationController
     @category.destroy
     redirect_to(categories_url)
   end 
+  
 
 end

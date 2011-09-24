@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
   
   before_filter :load_company
 
+  # todo: нельзя добавлять комментарии не зарегистрированным/залогонившимся
   
   def create
     @review = @company.reviews.new(params[:review])
