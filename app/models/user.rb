@@ -23,4 +23,9 @@ class User < ActiveRecord::Base
 
     validates_attachment_size :avatar, :less_than => 5.megabytes
     validates_attachment_content_type :avatar, :content_type => ['image/jpeg', 'image/png', 'image/gif']
+    
+  def update_with_password(params={})
+    params.delete(:current_password)
+    self.update_without_password(params)
+  end
 end
