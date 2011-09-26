@@ -8,11 +8,7 @@
       <%= link_to @company.category.name, city_with_category_path(@company.city, @company.category) %>
     </p>
     <p>
-      Рейтинг: <%= @company.rating %>
-        <%= form_tag change_rating_url do %>
-          <%= submit_tag "-" %>
-          <%= submit_tag "+" %>
-        <% end %>
+      Рейтинг: <%= render 'rating' %>
     </p>
   </div>
   <div class="description">

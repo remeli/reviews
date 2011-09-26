@@ -1,5 +1,7 @@
 class Company < ActiveRecord::Base
   
+  # todo: удалить самодельный рейтинг
+  
   def full_address
     city = City.find_by_id(self.city_id)
     "#{self.address}, #{city.name}"
@@ -27,19 +29,12 @@ class Company < ActiveRecord::Base
   
   scope :where_category_city, lambda { |cat_id, city_id| where("companies.category_id = ? AND companies.city_id = ?", "#{cat_id}", "#{city_id}") }
   
+  # rating
+  ajaxful_rateable :stars => 10, :dimensions => [:all]
+  
   # permalink
   def to_param
     permalink
-  end
-  
-  # rating
-  def change_rating(commit)
-    case commit
-    when commit = "+"
-      self.rating += 1
-    when commit = "-"
-      self.rating -= 1      
-    end
   end
   
 end

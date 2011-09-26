@@ -1,9 +1,9 @@
 // notice
 $(function(){
   $('#flash_notice').animate({
-    opacity: 0.2
-  }, 1500);
+    opacity: 0.3
+  }, 1100);
   $(function(){
-    $('#flash_notice').slideUp('slow');
-  })
+    $('#flash_notice').slideUp('fast');
+  });
 });
