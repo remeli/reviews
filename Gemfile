@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'paperclip'
 gem 'geocoder'
+gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
 
 group :console do
   gem "awesome_print"
