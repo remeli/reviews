@@ -28,4 +28,6 @@ class User < ActiveRecord::Base
     params.delete(:current_password)
     self.update_without_password(params)
   end
+  
+  #todo: сделать show action для юзеров
 end
