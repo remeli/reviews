@@ -172,8 +172,33 @@ color:#fff;
 #footer{
   border-top:1px solid #ccc;
   height:120px;
+  font-size:12px;
+  font-family:Tahoma, Arial, sans-serif;
 }
-
+#footer a{
+  text-decoration:none;
+}
+#footer #copy{
+  float:right;
+  margin-top:50px;
+  margin-right:20px;
+}
+#footer #footer_menu{
+  float:left;
+  margin-top:10px;
+  margin-left:20px;
+}
+#footer #footer_menu ul{
+  float:left;
+  margin-right:50px;
+}
+#footer #footer_menu ul li{
+  margin-bottom:5px;
+}
+#footer #footer_menu .first{
+  font-weight:bold;
+  color:#ccc;
+}
 
 /* Content in */
 /* city */
@@ -462,4 +487,3 @@ color:#fff;
   font-size:11px;
   text-decoration:none;
 }
-
