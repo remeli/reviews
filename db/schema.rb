@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110926092602) do
+ActiveRecord::Schema.define(:version => 20110927082626) do
 
   create_table "categories", :force => true do |t|
     t.string   "name",       :limit => 100, :null => false
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(:version => 20110926092602) do
   create_table "reviews", :force => true do |t|
     t.text     "post",                         :null => false
     t.boolean  "positive",   :default => true
-    t.integer  "rating",     :default => 0
     t.integer  "user_id"
     t.integer  "company_id"
     t.datetime "created_at"

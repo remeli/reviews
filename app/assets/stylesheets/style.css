@@ -1,5 +1,5 @@
 html,body{
-  font-family:Arial,Tahoma, sans-serif;
+  font-family:Tahoma, Arial, sans-serif;
   font-size:12px;
   
 }
@@ -178,10 +178,30 @@ color:#fff;
 #footer a{
   text-decoration:none;
 }
+#footer a:hover{
+  color:#494949;
+  text-decoration:underline;
+}
 #footer #copy{
   float:right;
   margin-top:50px;
   margin-right:20px;
+  font-size:10px;
+}
+#footer #developer{
+  float:right;
+  position:relative;
+  left:135px;
+  margin-top: 70px;
+  padding: 5px;
+  width: 125px;
+  background:#F3F3F3;
+  color: #7B7B7B;
+  text-align: left;
+  font-size: 11px;
+}
+#footer #developer .first{
+  color: #922;
 }
 #footer #footer_menu{
   float:left;
@@ -394,14 +414,14 @@ color:#fff;
 
 #main_content .title_category{
   font-size:16px;
-  background:#4E4E4E;
-  padding:7px;
+  background:#F3F3F3;
+  padding:5px;
   text-align:left;
-  color:#ccc;
+  color:#737373;
 }
 #main_content .title_category a{
   text-decoration:none;
-  color:#fff;
+  color:#737373;
 }
 #main_content .title_category a:hover{
   text-decoration:underline;
