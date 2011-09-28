@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  has_many :companies, :dependent => :destroy
+  has_many :companies, :dependent => :nullify
   
   validates :name, :presence => { :message => "Пустое имя" }
   validates :permalink, :presence => { :message => "Пустая прямая ссылка" }

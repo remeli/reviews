@@ -1,5 +1,5 @@
 class City < ActiveRecord::Base
-  has_many :companies, :dependent => :destroy
+  has_many :companies, :dependent => :nullify
 
   validates :name, :presence => { :message => "Имя пустое"} #todo: http://rubyclub.com.ua/messages/show/15656
   
