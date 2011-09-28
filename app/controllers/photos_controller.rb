@@ -16,17 +16,19 @@ class PhotosController < ApplicationController
   # end
   
   def new
+    @title = "Добавление фотографии"
     @photo = @company.photos.new
   end
   
   def create
-    @photo = @company.photos.new(params[:photo])
-    if @photo.save
-      redirect_to(@company, :notice => "Фотография успешно добавлена")
-    else
-      #TODO: разобраться с выводом ошибок
-      redirect_to(edit_company_path(@company))
-    end
+    #todo: сделать загрузку нескольких изображений, jquery эффект для добавления поля и чтобы use_id появлялся
+    # @photo = @company.photos.new(params[:photo])
+    # if @photo.save
+    #   redirect_to(@company, :notice => "Фотография успешно добавлена")
+    # else
+    #   #TODO: разобраться с выводом ошибок
+    #   redirect_to(edit_company_path(@company))
+    # end
   end
   
   def destroy
