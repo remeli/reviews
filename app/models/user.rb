@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   #associations
   has_many :reviews, :dependent => :destroy
   has_many :companies, :dependent => :destroy
+  has_many :photos, :dependent => :nullify
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

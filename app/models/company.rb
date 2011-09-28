@@ -1,7 +1,5 @@
 class Company < ActiveRecord::Base
   
-  # todo: удалить самодельный рейтинг
-  
   def full_address
     city = City.find_by_id(self.city_id)
     "#{self.address}, #{city.name}"
@@ -9,14 +7,16 @@ class Company < ActiveRecord::Base
   
   geocoded_by :full_address
   after_validation :geocode
-  
     
   #associations
   has_many :reviews, :dependent => :destroy
+  has_many :photos, :dependent => :destroy
   belongs_to :city
   belongs_to :category
   belongs_to :user
+  
   default_scope order("companies.name ASC")
+  
   
   validates :name, :presence => { :message => "Имя пустое" }
   validates :permalink, :presence => { :message => "Пустая ссылка" }
