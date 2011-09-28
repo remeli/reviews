@@ -1,0 +1,10 @@
+<%= form_for([@company, @company.photos.new]) do |f| %>
+  <%= error_messages_for(@company.photos.new) %>
+  <div class="field">
+    <%= f.label :image, "Фото:" %><br />
+    <%= f.file_field :image %>
+  </div>
+  <div class="submit">
+    <%= f.submit "Добавить" %>
+  </div>
+<% end %>
