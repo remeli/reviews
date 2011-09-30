@@ -1,34 +1,17 @@
 class PhotosController < ApplicationController
 
   #filters:
+    
+  before_filter :load_company, :only => [:destroy]
+  before_filter :load_user, :only => [:destroy]
   
-  before_filter :load_company, :only => [:new, :create, :destroy]
-  before_filter :load_user, :only => [:new, :create, :destroy]
   
-  # crud:
-  
-  # def index
-  #   @photos = Photo.all
-  # end
-  # 
-  # def show
-  #   @photo = Photo.find(params[:id])
-  # end
-  
-  def new
-    @title = "Добавление фотографии"
-    @photo = @company.photos.new
+  def index
+    
   end
   
-  def create
-    #todo: сделать загрузку нескольких изображений, jquery эффект для добавления поля и чтобы use_id появлялся
-    # @photo = @company.photos.new(params[:photo])
-    # if @photo.save
-    #   redirect_to(@company, :notice => "Фотография успешно добавлена")
-    # else
-    #   #TODO: разобраться с выводом ошибок
-    #   redirect_to(edit_company_path(@company))
-    # end
+  def show
+    
   end
   
   def destroy

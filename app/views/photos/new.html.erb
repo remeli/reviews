@@ -5,10 +5,12 @@
   <div class="form_add">
     <%= form_for([@company, @company.photos.new], :html => {:multipart => true}) do |f| %>
       <%= error_messages_for(@company.photos.new) %>
-      <div class="photo">
-        <%= f.file_field :image %><br />
-                <%= f.file_field :image %>
+      <div class="photos">
+        <div class="newPaperclipFiles">
+          <%= f.file_field :image %>
+        </div>
       </div>
+      
       <div class="add_field">
         <a href="#" id="add_field">Добавить еще ...</a>
       </div>

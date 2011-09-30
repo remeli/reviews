@@ -15,6 +15,8 @@ class Company < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
   
+  accepts_nested_attributes_for :photos, :allow_destroy => true
+  
   default_scope order("companies.name ASC")
   
   

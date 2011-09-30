@@ -1,0 +1,14 @@
+<!-- todo: доделать чтобы update и create были для фото, а то только create.
+Сделать company.flash адекватным -->
+<%= form_for(@company) do |f| %>
+  <%= error_messages_for(@company) %>
+  <%= f.fields_for :photos do |photo| %>
+    <%= photo.file_field :image %>
+  <% end %>
+  <div class="field">
+    <input type="hidden" name="company[user_id]" value="<%= current_user.id %>">
+  </div>
+  <div class="submit">
+    <%= submit_or_cancel(f) %>
+  </div>
+<% end %>
