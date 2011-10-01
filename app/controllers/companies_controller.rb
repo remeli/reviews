@@ -2,7 +2,6 @@ class CompaniesController < ApplicationController
   
   before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy]
   before_filter :check_owner, :only => [:edit, :update, :destroy]
-  before_filter :load_company, :only => [:add_photo]
   
   def index
     @companies = Company.all
@@ -53,19 +52,13 @@ class CompaniesController < ApplicationController
     @company = Company.find_by_permalink(params[:id])
     @company.rate(params[:stars], current_user, params[:dimension])
   end
-  
-  #add photo
-  
-  def add_photo
-    10.times { @company.photos.build }
-  end
-  
+
   private
   
     def check_owner
       @company = Company.find_by_permalink(params[:id])
       unless current_user.id == @company.user_id
-        redirect_to @company, :alert => "У Вас нет прав для редактирования/удаления этой компании"
+        redirect_to @company, :alert => "У Вас нет прав для редактирования этой компании"
       end
     end
     

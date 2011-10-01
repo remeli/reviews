@@ -11,7 +11,6 @@ Reviews::Application.routes.draw do
     resources :photos
     member do
       post 'rate'
-      get 'add_photo'
     end
   end
   

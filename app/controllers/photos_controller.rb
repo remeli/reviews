@@ -6,20 +6,6 @@ class PhotosController < ApplicationController
   before_filter :load_user, :only => [:destroy]
   
   
-  def index
-    
-  end
-  
-  def show
-    
-  end
-  
-  def destroy
-    @photo = company.photos.find(params[:id])
-    @photo.destroy
-    redirect_to(@company)
-  end
-  
   private
   
     def load_company
