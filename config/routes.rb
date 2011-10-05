@@ -8,7 +8,9 @@ Reviews::Application.routes.draw do
   resources :cities
   resources :companies do
     resources :reviews
-    resources :photos
+    resources :photos do
+      resources :assets
+    end
     member do
       post 'rate'
     end

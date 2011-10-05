@@ -15,7 +15,7 @@
     <%= @company.description %>
   </div>
   <div id="add_photo_company">
-    <%= link_to "Добавить фото", add_photo_company_path(@company) %>
+    <%= link_to "Добавить фото", new_company_photo_path(@company) %>
   </div>
   <div class="dateadd_company">
     Дата добавления: <%= date(@company) %>
