@@ -8,6 +8,8 @@ gem 'rails', '3.1.0'
 gem 'mysql2'
 gem 'devise'
 gem 'paperclip'
+gem 'carrierwave'
+gem 'nested_form'
 gem 'geocoder'
 gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
 
