@@ -1,5 +1,5 @@
 class Asset < ActiveRecord::Base
-  belongs_to :photo
+  belongs_to :photo, :polymorphic => true
   
   # paperclip
   
@@ -7,10 +7,29 @@ class Asset < ActiveRecord::Base
                       :url => "/system/:attachment/:id/:style/:basename.:extension",
                       :path => ":rails_root/public/system/:attachment/:id/:style/:basename.:extension"
   
-  # validates
-                      
+  # validates                      
   validates_attachment_presence :image, :message => "Выберите файл"
-  validates_attachment_size :image, :less_than => 5.megabytes, :message => "Размер не должен превышать 5 мегабайт"
   validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png', 'image/gif'], :message => "Неподдерживаемый формат"
+  
+  #Set number to the max Attachments allowed for owner
+  
+  Max_Attachments = 5
+  Max_Attachments_Size = 5.megabyte
+  
+  def url(*args)
+    data.url(*args)
+  end
+  
+  def name
+    data_file_name
+  end
+  
+  def content_type
+    data_content_type
+  end
+  
+  def file_size
+    data_file_size
+  end
   
 end
