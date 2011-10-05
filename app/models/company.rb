@@ -10,7 +10,6 @@ class Company < ActiveRecord::Base
     
   #associations
   has_many :reviews, :dependent => :destroy
-  has_many :photos, :dependent => :destroy
   belongs_to :city
   belongs_to :category
   belongs_to :user
