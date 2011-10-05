@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
   # associations
   belongs_to :user
   belongs_to :company
-  has_many :assets, :as => :attachable, :dependent => :destroy
+  has_many :assets, :dependent => :destroy
   
   validate :validate_attachments
     

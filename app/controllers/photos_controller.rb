@@ -2,15 +2,15 @@ class PhotosController < ApplicationController
 
   #filters:
     
-  before_filter :load_company, :only => [:new, :destroy]
+  before_filter :load_company, :only => [:new, :destroy, :create]
   before_filter :load_user, :only => [:new, :destroy]
   
   def new
-    @photo = Photo.new
+    @attachable = Photo.new
   end
   
   def create
-    # todo: сделать мультизагрузку
+
   end
   private
   
