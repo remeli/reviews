@@ -17,19 +17,19 @@ class Asset < ActiveRecord::Base
   Max_Attachments_Size = 5.megabyte
   
   def url(*args)
-    data.url(*args)
+    image.url(*args)
   end
   
   def name
-    data_file_name
+    image_file_name
   end
   
   def content_type
-    data_content_type
+    image_content_type
   end
   
   def file_size
-    data_file_size
+    image_file_size
   end
   
 end
