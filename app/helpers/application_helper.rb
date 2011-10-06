@@ -39,4 +39,12 @@ module ApplicationHelper
       end
   end
   
+  def user_admin_company?(object)
+    if current_user.id == object.user_id
+      true
+    else
+      false
+    end
+  end
+  
 end

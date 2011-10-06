@@ -1,4 +1,17 @@
 class Company < ActiveRecord::Base
+
+  # TODO:  разобраться с nested_forms, хуйня какаята
+      
+  #attr_accessible :attachments_attributes # удалить тогда будет работать!
+
+  #associations
+  belongs_to :city
+  belongs_to :category
+  belongs_to :user
+  has_many :attachments, :as => :attachable
+  has_many :reviews, :dependent => :destroy
+
+  accepts_nested_attributes_for :attachments
   
   def full_address
     city = City.find_by_id(self.city_id)
@@ -7,13 +20,6 @@ class Company < ActiveRecord::Base
   
   geocoded_by :full_address
   after_validation :geocode
-    
-  #associations
-  has_many :reviews, :dependent => :destroy
-  belongs_to :city
-  belongs_to :category
-  belongs_to :user
-  
   
   default_scope order("companies.name ASC")
   

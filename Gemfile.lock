@@ -5,6 +5,12 @@ GIT
   specs:
     ajaxful_rating (3.0.0.beta6)
 
+GIT
+  remote: git://github.com/ryanb/nested_form.git
+  revision: 57f32788f1952bcd633057b4b56b69b51df17610
+  specs:
+    nested_form (0.1.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -41,6 +47,8 @@ GEM
     awesome_print (0.4.0)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
+    carrierwave (0.5.7)
+      activesupport (~> 3.0)
     cocaine (0.2.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -131,12 +139,14 @@ PLATFORMS
 DEPENDENCIES
   ajaxful_rating!
   awesome_print
+  carrierwave
   coffee-rails (~> 3.1.0)
   devise
   geocoder
   jquery-rails
   json
   mysql2
+  nested_form!
   paperclip
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)

@@ -9,6 +9,7 @@ Reviews::Application.routes.draw do
   resources :companies do
     resources :reviews
     member do
+      get 'add_photo'
       post 'rate'
     end
   end

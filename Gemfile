@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'devise'
 gem 'paperclip'
 gem 'carrierwave'
-gem 'nested_form'
+gem "nested_form", :git => "git://github.com/ryanb/nested_form.git"
 gem 'geocoder'
 gem 'ajaxful_rating', :git => 'git://github.com/edgarjs/ajaxful-rating.git', :branch => "rails3"
 

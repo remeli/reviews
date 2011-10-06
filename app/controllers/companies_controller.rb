@@ -1,8 +1,8 @@
 class CompaniesController < ApplicationController
   
-  before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy]
-  before_filter :check_owner, :only => [:edit, :update, :destroy]
-  
+  before_filter :user_have, :only => [:new, :create, :edit, :update, :destroy, :add_photo]
+  before_filter :check_owner, :only => [:edit, :update, :destroy, :add_photo]
+  before_filter :load_company, :only => [:add_photo]
   def index
     @companies = Company.all
     @title = "Каталог компаний"
@@ -44,13 +44,18 @@ class CompaniesController < ApplicationController
   def destroy
     @company = Company.find_by_permalink(params[:id])
     @company.destroy
-    redirect_to(companies_url)
+    redirect_to(companies_url, :notice => "Компания успешно удалена")
   end
   
   # rating
   def rate
     @company = Company.find_by_permalink(params[:id])
     @company.rate(params[:stars], current_user, params[:dimension])
+  end
+  
+  # add_photo
+  def add_photo
+    
   end
 
   private
